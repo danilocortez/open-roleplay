@@ -9,7 +9,7 @@ RegisterNetEvent('chat:addSuggestions')
 RegisterNetEvent('chat:removeSuggestion')
 RegisterNetEvent('chat:clear')
 
--- internal events
+-- eventos internos (não mexa!)
 RegisterNetEvent('__cfx_internal:serverPrint')
 
 RegisterNetEvent('_chat:messageEntered')
@@ -27,7 +27,7 @@ AddEventHandler('sendProximityMessage', function(id, name, message, color)
 	end
 end)
 
---deprecated, use chat:addMessage
+-- strings de mensagem
 AddEventHandler('chatMessage', function(author, color, text)
   local args = { text }
   if author ~= "" then

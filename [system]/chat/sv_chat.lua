@@ -1,9 +1,9 @@
--- DEFAULT --
+-- tunnel antiga
 local Tunnel = module("vrp", "lib/Tunnel")
 local Proxy = module("vrp", "lib/Proxy")
--- WEBHOOK
-local webhooklink = "https://discordapp.com/api/webhooks/714879927631216691/pIdhdIvT0xlJcGVE6DfGvyv2KAiv7m9a_ove0ZOmCAbvcBXDt7GK-cAm1G9EPOLXPz72"
-
+-- webhook
+local webhooklink = "https://discordapp.com/api/webhooks/719543722441965618/rope-J2FMMyjTdMhNH_T1irDoMZGm5uaZ5AeH8w-s4dSKhznwmLwrkmqRnxFQETYmR_O"
+-- por favor não mexa
 function SendWebhookMessage(webhook,message)
     if webhook ~= nil and webhook ~= "" then
         PerformHttpRequest(webhook, function(err, text, headers) end, 'POST', json.encode({content = message}), { ['Content-Type'] = 'application/json' })
@@ -25,11 +25,11 @@ RegisterServerEvent('chat:clear')
 RegisterServerEvent('__cfx_internal:commandFallback')
 
 Citizen.CreateThread(function()
-	ac_webhook_joins = GetConvar("ac_webhook_joins", "https://discordapp.com/api/webhooks/714879927631216691/pIdhdIvT0xlJcGVE6DfGvyv2KAiv7m9a_ove0ZOmCAbvcBXDt7GK-cAm1G9EPOLXPz72")
-	ac_webhook_gameplay = GetConvar("ac_webhook_gameplay", "https://discordapp.com/api/webhooks/714879927631216691/pIdhdIvT0xlJcGVE6DfGvyv2KAiv7m9a_ove0ZOmCAbvcBXDt7GK-cAm1G9EPOLXPz72")
-	ac_webhook_bans = GetConvar("ac_webhook_bans", "https://discordapp.com/api/webhooks/714879927631216691/pIdhdIvT0xlJcGVE6DfGvyv2KAiv7m9a_ove0ZOmCAbvcBXDt7GK-cAm1G9EPOLXPz72")
-	ac_webhook_wl = GetConvar("ac_webhook_wl", "https://discordapp.com/api/webhooks/714879927631216691/pIdhdIvT0xlJcGVE6DfGvyv2KAiv7m9a_ove0ZOmCAbvcBXDt7GK-cAm1G9EPOLXPz72")
-	ac_webhook_arsenal = GetConvar("ac_webhook_arsenal", "https://discordapp.com/api/webhooks/714879927631216691/pIdhdIvT0xlJcGVE6DfGvyv2KAiv7m9a_ove0ZOmCAbvcBXDt7GK-cAm1G9EPOLXPz72")
+	ac_webhook_joins = GetConvar("ac_webhook_joins", "https://discordapp.com/api/webhooks/719543722441965618/rope-J2FMMyjTdMhNH_T1irDoMZGm5uaZ5AeH8w-s4dSKhznwmLwrkmqRnxFQETYmR_O")
+	ac_webhook_gameplay = GetConvar("ac_webhook_gameplay", "https://discordapp.com/api/webhooks/719543722441965618/rope-J2FMMyjTdMhNH_T1irDoMZGm5uaZ5AeH8w-s4dSKhznwmLwrkmqRnxFQETYmR_O")
+	ac_webhook_bans = GetConvar("ac_webhook_bans", "https://discordapp.com/api/webhooks/719543722441965618/rope-J2FMMyjTdMhNH_T1irDoMZGm5uaZ5AeH8w-s4dSKhznwmLwrkmqRnxFQETYmR_O")
+	ac_webhook_wl = GetConvar("ac_webhook_wl", "https://discordapp.com/api/webhooks/719543722441965618/rope-J2FMMyjTdMhNH_T1irDoMZGm5uaZ5AeH8w-s4dSKhznwmLwrkmqRnxFQETYmR_O")
+	ac_webhook_arsenal = GetConvar("ac_webhook_arsenal", "https://discordapp.com/api/webhooks/719543722441965618/rope-J2FMMyjTdMhNH_T1irDoMZGm5uaZ5AeH8w-s4dSKhznwmLwrkmqRnxFQETYmR_O")
 
 	function SendWebhookMessage(webhook,message)
 		if webhook ~= "none" then
