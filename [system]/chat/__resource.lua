@@ -1,8 +1,9 @@
 resource_manifest_version '44febabe-d386-4d18-afbe-5e627f4af937'
 
 dependency 'vrp'
+dependency 'vrp_aurora'
 
-description 'chat management stuff'
+description 'Chat personalizado por Dansize#1894'
 
 ui_page 'html/index.html'
 
